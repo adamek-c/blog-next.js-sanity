@@ -1,6 +1,10 @@
-import type { NextPage } from "next";
 import Head from "next/head";
 import { sanityClient } from ".././sanity";
+import { Post } from "../type";
+
+interface Props {
+	posts: Post[];
+}
 
 export const getServerSideProps = async () => {
 	const query = `*[_type == "post"]{
@@ -24,7 +28,7 @@ publishedAt
 	};
 };
 
-const Home: NextPage = ({ props }) => {
+const Home = ({ posts }: Props) => {
 	return (
 		<div>
 			<Head>
