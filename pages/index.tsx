@@ -1,16 +1,40 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import Image from "next/image";
+import { sanityClient } from ".././sanity";
 
-const Home: NextPage = () => {
+export const getServerSideProps = async () => {
+	const query = `*[_type == "post"]{
+  _id,
+  title,
+  slug,
+  author -> {
+  name
+},
+mainImage,
+description,
+publishedAt
+}`;
+
+	const posts = await sanityClient.fetch(query);
+
+	return {
+		props: {
+			posts,
+		},
+	};
+};
+
+const Home: NextPage = ({ props }) => {
 	return (
-		<div className="flex min-h-screen flex-col items-center justify-center py-2">
+		<div>
 			<Head>
 				<title>BlogFood</title>
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 
-			<h1>Home</h1>
+			<div className=" mt-[155px] max-w-screen-xl mx-auto px-6 xl:p-0">
+				<h1>Home</h1>
+			</div>
 		</div>
 	);
 };

@@ -3,7 +3,7 @@ import Link from "next/link";
 const PageNotFound = () => {
 	return (
 		<section>
-			<div className="flex min-h-screen flex-col items-center justify-center py-2">
+			<div className="flex min-h-screen flex-col items-center justify-center ">
 				<h2 className="font-bold text-8xl font-playfairDisplay">404</h2>
 				<h4 className="mt-10 font-bold text-2xl font-openSans">
 					Uh Oh! You're lost.
@@ -15,7 +15,7 @@ const PageNotFound = () => {
 				</p>
 				<div className="mt-10">
 					<Link href="/" className="">
-						<a className="font-playfairDisplay font-medium text-xl border-2 py-3 px-6">
+						<a className="font-playfairDisplay font-medium text-xl border-2 py-3 px-6 hover:bg-black hover:text-white transition">
 							Sweet Home
 						</a>
 					</Link>
