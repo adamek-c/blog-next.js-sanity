@@ -8,11 +8,11 @@ interface LayoutProp {
 
 const Layout: FC<LayoutProp> = ({ children }) => {
 	return (
-		<>
+		<div className="max-w-screen-xl mx-auto px-6 xl:p-0">
 			<Navbar />
 			<div>{children}</div>
 			<Footer />
-		</>
+		</div>
 	);
 };
 

@@ -15,4 +15,7 @@ export interface Post {
 	description: string;
 	publishedAt: string;
 	body: [object];
+	categories: {
+		_ref: string;
+	};
 }

@@ -14,7 +14,7 @@ const Navbar = () => {
 			<nav
 				className={classNames(
 					scrollPosition > 0 ? "shadow" : "shadow-none",
-					" w-full py-8  fixed top-0 left-0 right-0  px-6 bg-white transition-shadow"
+					" w-full py-8  fixed top-0 left-0 right-0  px-6 bg-white transition-shadow z-20"
 				)}
 			>
 				<div className="max-w-screen-xl mx-auto flex justify-between items-center">
