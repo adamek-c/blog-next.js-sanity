@@ -1,5 +1,6 @@
 import Head from "next/head";
 import { sanityClient } from ".././sanity";
+import Banner from "../components/Banner";
 import { Post } from "../type";
 
 interface Props {
@@ -13,11 +14,11 @@ export const getServerSideProps = async () => {
   slug,
   author -> {
   name
-},
-mainImage,
-description,
-publishedAt
-}`;
+	},
+	mainImage,
+	description,
+	publishedAt
+	}`;
 
 	const posts = await sanityClient.fetch(query);
 
@@ -30,16 +31,15 @@ publishedAt
 
 const Home = ({ posts }: Props) => {
 	return (
-		<div>
+		<main>
 			<Head>
 				<title>BlogFood</title>
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
-
-			<div className=" mt-[155px] max-w-screen-xl mx-auto px-6 xl:p-0">
-				<h1>Home</h1>
-			</div>
-		</div>
+			<section>
+				<Banner title="Find you're dish and try to make!!!" bg="/bg.png" />
+			</section>
+		</main>
 	);
 };
 

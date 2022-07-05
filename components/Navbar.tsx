@@ -29,7 +29,6 @@ const Navbar = () => {
 					<div className="space-x-10 text-lg text-zinc-700 font-openSans hidden md:flex">
 						<Link href="/">Home</Link>
 						<Link href="/about">About</Link>
-						<Link href="/contact">Contact</Link>
 					</div>
 				</div>
 			</nav>

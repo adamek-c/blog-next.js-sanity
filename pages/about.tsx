@@ -1,8 +1,10 @@
+import Banner from "../components/Banner";
+
 const about = () => {
 	return (
-		<div className="flex min-h-screen flex-col items-center justify-center ">
-			about
-		</div>
+		<section>
+			<Banner title="About Me" bg="/about.png" />
+		</section>
 	);
 };
 
