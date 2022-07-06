@@ -5,6 +5,11 @@ export interface Post {
 		current: string;
 	};
 	author: {
+		image: {
+			assets: {
+				_ref: string;
+			};
+		};
 		name: string;
 	};
 	mainImage: {
