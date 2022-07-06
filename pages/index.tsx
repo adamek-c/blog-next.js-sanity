@@ -1,4 +1,5 @@
 import Head from "next/head";
+import { useState } from "react";
 import { sanityClient } from ".././sanity";
 import Banner from "../components/Banner";
 import Posts from "../components/Posts";
